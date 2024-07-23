@@ -1,6 +1,6 @@
 import { defineConfig } from "vite";
 
 export default defineConfig({
-  base: "/portfolio-mock/",
+  base: "/",
   // other configurations can go here
 });
