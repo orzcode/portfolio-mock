@@ -1,0 +1,246 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: whitesmoke;
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --header: #22334b;
+  --main: #323232;
+  /* --highlighted: #22334B; */
+}
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* outline: 1px solid black; */
+}
+html {
+  font-size: 62.5%;
+  /* FONTSIZE TRICK-- 1 rem = 10 px here, usually 1 rem = 16px */
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  caret-color: transparent;
+}
+body {
+  font-size: 2rem;
+  /* font-size: calc(1.5rem + 0.4vw); */
+  /* FONTSIZE TRICK-- 1 rem = 10 px here, usually 1 rem = 16px */
+  /* FONTSIZE - Adding the 0.4 is for responsivity */
+}
+button {
+  border-radius: 1rem;
+  outline: 1px solid black;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #000000;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+ul {
+  list-style: none;
+}
+img {
+  max-width: 100%;
+  display: block;
+}
+a {
+  text-decoration: none;
+}
+/* ----------------------------------------- */
+html {
+  background-color: var(--main);
+  color: whitesmoke;
+}
+#container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: stretch;
+  min-height: 100vh;
+  /*This is important for flex-based bottom footer*/
+}
+/* ----------------------------------------- */
+header {
+  padding: 5rem 6rem;
+  .headerGroup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 1rem;
+
+    img {
+      outline: 1px solid black;
+      box-shadow: 5px 5px 10px #000000;
+
+      /* max-width: 800px;
+      max-inline-size: 100%;
+      object-fit: contain; */
+    }
+  }
+
+  .box {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+    font-size: clamp(1.8rem, 2vw, 2rem);
+    line-height: 2;
+    outline: 1px solid black;
+    box-shadow: 5px 5px 10px #000000;
+  }
+  h1 {
+    filter: drop-shadow(1px 1px 1px black);
+    font-size: clamp(3rem, 3vw, 4rem);
+  }
+  .socials {
+    max-width: min-content;
+    align-self: flex-end;
+    padding: 1rem;
+  }
+  .social-UL {
+    display: flex;
+    gap: 2rem;
+  }
+  .social-LI {
+    font-size: clamp(2rem, 4vw, 4rem);
+  }
+}
+/* ----------------------------------------- */
+main {
+  background-color: var(--main);
+  display: flex;
+  flex-grow: 1;
+  width: 100%;
+  min-height: 50vh;
+  align-items: center;
+  justify-items: center;
+  padding: 5rem 6rem;
+}
+
+.card-container {
+  display: grid;
+  width: 100%;
+
+  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+  gap: 6rem;
+}
+
+.card {
+  background-color: #544545;
+
+  min-width: 380px;
+  max-width: 380px;
+
+  margin: auto;
+
+  outline: 1px solid black;
+  box-shadow: 2px 2px 18px #000000;
+
+  .cardBoxTitle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  .box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    justify-content: center;
+  }
+  p {
+    overflow: ellipsis;
+    text-overflow: ellipsis;
+  }
+
+  img {
+    height: 300px;
+    width: 380px;
+    object-fit: cover;
+  }
+}
+/* ----------------------------------------- */
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+padding: 5rem 6rem;
+
+
+  img {
+    object-fit: contain;
+    border-radius: 1rem;
+    max-inline-size: 100%;
+    max-width: 720px;
+    min-width: 380px;
+  }
+  .footerGroup {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .box {
+    display: flex;
+    flex-direction: column;
+    min-width: 250px;
+
+    flex-basis: 40%;
+    gap: 1rem;
+    padding: 1rem;
+    font-size: clamp(1.8rem, 2vw, 2rem);
+    line-height: 2;
+    /* outline: 1px solid black;
+    box-shadow: 1px 1px 5px #000000; */
+  }
+  h1 {
+    filter: drop-shadow(1px 1px 1px black);
+    font-size: clamp(3rem, 3vw, 4rem);
+  }
+
+  
+}
+
+.contactIcons{
+display: flex;
+gap: calc(1rem + 10%);
+}
+.fa-brands {
+  color: whitesmoke;
+
+}
+/* ----------------------------------------- */
+
+@media (max-width: 1560px) {
+  .headerGroup {
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 1260px) {
+  .footerGroup {
+    flex-direction: column;
+  }
+}
