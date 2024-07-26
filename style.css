@@ -140,14 +140,14 @@ main {
   display: grid;
   width: 100%;
 
-  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 6rem;
 }
 
 .card {
   background-color: #544545;
 
-  min-width: 380px;
+  min-width: 320px;
   max-width: 380px;
 
   margin: auto;
@@ -242,5 +242,13 @@ gap: calc(1rem + 10%);
 @media (max-width: 1260px) {
   .footerGroup {
     flex-direction: column;
+  }
+  header, main, footer {
+    padding: 2rem;
+  }
+}
+@media (max-width: 1160px){
+  header, main, footer {
+    padding: 0.5rem;
   }
 }
